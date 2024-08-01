@@ -3,3 +3,4 @@ A continuación se presenta el procedimeinto para la estimación de parámetros 
 Simulink / Matlab tiene una herramienta para llevar a cabo este proceso y de esta manera poder obtener un modelo de simulación Simscape, función de transferencia o espacio de estados
 ## Procedimiento para el uso del estimador de parámetros Simulinkb / Matlab
 Se presenta un ejemplo donde se pretende obtener los parámetros internos de un motor DC (inductancia, resistencia, constantes de transformación, etc.). El motor utilizado es el Moog C23L33W10
+![Motor DC marca mooc](images/motorDC.png){width='100px'}
