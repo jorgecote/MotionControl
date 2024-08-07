@@ -63,7 +63,7 @@ Para este caso se han configurado aquellos parámetros que se encuentran en la d
 
   Todos los otros parámetros se han configuardo de acuerdo a los datos dados en el datasheet. La siguiente imágen muestra los parámetros configurados:
 
-![electric parameters](images/MotordDC_electric parameters.png)
+![electric parameters](images/MotordDC_electric_parameters.png)
 
 ![mechanical parameters](images/MotorDC mechanical parameters.PNG)
 
