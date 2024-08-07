@@ -65,7 +65,7 @@ Para este caso se han configurado aquellos parámetros que se encuentran en la d
 
 ![electric parameters](images/MotordDC_electric_parameters.png)
 
-![mechanical parameters](images/MotorDC mechanical parameters.PNG)
+![mechanical parameters](images/MotorDC_mechanical_parameters.PNG)
 
   
 
@@ -76,7 +76,7 @@ Para utilizar la herramienta de estimación de parámetros, el modelo que se qui
 
 Con esto se abre una sesión de la aplicación de estimación de parámetros junto con la interfaz de usuario que tendrá el aspecto que se observa en la figura
 
-![parameter estimator interfaz](images/param_estim interfaz.PNG)
+![parameter estimator interfaz](images/param_estim_interfaz.PNG)
 
 Posteriormente configure un nuevo experimento de estimación de parámetros. Para la configuración de un nuevo experimento tenga en cuenta lo siguiente:
 
