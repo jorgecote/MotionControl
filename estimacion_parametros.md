@@ -32,7 +32,8 @@ Teniendo los datos de la prueba almacenados en una estructura de matlab que tien
 * Para la respuesta de la velocidad en RPM 'MotorDC{1}.Values.Data' y 'MotorDC{1}.Values.Time' para la base de tiempo
 
 El código en Matlab para graficar la entrada y salida a partir de los datos almacenados en las estructuras anteriormente mencionadas puede escribirse asi:
-```>>subplot(2,1,1)
+```
+>> subplot(2,1,1)
 >> plot(MotorDC{2}.Values.Time, MotorDC{2}.Values.Data)
 >> title('Entrada de pulsos')
 >> ylabel('Voltaje (V)')
@@ -47,6 +48,12 @@ El código en Matlab para graficar la entrada y salida a partir de los datos alm
 ```
 ![Datos entrada y salida motorDC](images/DatosMotorDC.PNG)
 
+## Creación de modelo Simulink
+Para este caso se utilizará el paquete Simscape de Simulink, el cual cuenta con un modelo parametrizado de un motor DC, lo cual facilitará la creación del modelo. 
+
+![Modelo Simulink MotorDC](images/Modelo_MotorDC.PNG)
+
+En la imagen se observa bloques de paquete Simscape que representan el modelo matemático de un motor DC, conectado a un puente H como driver de potencia y un generador de PWM para conmutar los transistores del puente H. Los dos últimos son modelos ideales en los cuales no se configuró ningún parámetro.
 
 
 
