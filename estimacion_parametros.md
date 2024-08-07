@@ -19,7 +19,7 @@ Para realizar la estimación de parámetros de cualquier sistema es posible redu
 
 * Recopilar los datos de entrada y salida del sistema por medio de una tarjeta de adquisición de datos, un osciloscopio o un microcontrolador+Simulink
 * Crear un modelo en simulink que represente el sistema del que no se conocen todos los parámetros
-* Declarar los parámetros que se quieren estimar como variables simbólicas y configura aquellos parámteros que son conocidos en el modelo Simulink
+* Declarar los parámetros que se quieren estimar como variables y configura aquellos parámetros que son conocidos en el modelo Simulink
 * Abrir la herramienta de estimación de parámetros y verificar que los parámetros que se van a estimar están configurados
 * Ejecutar la herramienta para que corra el algoritmo de optimización
 
@@ -55,7 +55,51 @@ Para este caso se utilizará el paquete Simscape de Simulink, el cual cuenta con
 
 En la imagen se observa bloques de paquete Simscape que representan el modelo matemático de un motor DC, conectado a un puente H como driver de potencia y un generador de PWM para conmutar los transistores del puente H. Los dos últimos son modelos ideales en los cuales no se configuró ningún parámetro.
 
+Para este caso se han configurado aquellos parámetros que se encuentran en la documentación dada por el fabricante y se dejan para estimar 3 parámetros que son desconocidos y que sería difícil medir:
 
+* L_arm es la inductancia de armadura del motor. Se le da un valor inicial arbitrario $3.2x10^-5$
+* rotor_damping es el coeficiente de amortiguamiento del eje del motor. Se le da un valor inicial de $1x10^-7$
+* stall_torque es el torque de operación del motor. Se le da un valor inicial de 0.003
 
+  Todos los otros parámetros se han configuardo de acuerdo a los datos dados en el datasheet.
+
+  
+
+## Herramienta de estimación de parámetros
+Para utilizar la herramienta de estimación de parámetros, el modelo que se quiere optimizar debe estar abierto. Posterormente se debe abrir la herramienta que se encuentra en la ruta:
+
+>*Apps->Control Systems->Parameter Estimator
+
+Con esto se abre una sesión de la aplicación de estimación de parámetros junto con la interfaz de usuario que tendrá el aspecto que se observa en la figura
+
+![Interfaz estimador de parámetros](images/param_estim interfaz.PNG)
+
+Posteriormente configure un nuevo experimento de estimación de parámetros. Para la configuración de un nuevo experimento tenga en cuenta lo siguiente:
+
+* Utilice 'outport' para representar todos los puntos del modelo de los cuales se tenga datos reales y conectelos
+* Al crear el nuevo experimento se despliega una ventana donde en la primera sección debe configurar los datos de salida tomados del sistema real
+* Configure los parámetros que va a estimar haciendo check en las respectivas variables
+* Corra el exprimento de estimación
+
+  ## Resultados de la estmación
+Durante el proceso de estimación se van viendo resultados que permite establecer si el algoritmo presenta convergencia para encontrar los parámetros del experimento.
+
+Por ejemplo se tiene la gráfica que va variando con el valor que va tomando cada parámetro durante la ejecución del algoritmo. En la siguiente figura se muestra el resultado del ejemplo del motor Moog C23L33W10.
+
+![parameter changes](images/parameter_changes.PNG)
+
+También durante la ejecución se va generando una tabla que muestra si se esta minimizando la función de costo. La sigueinte figura muestra los resultados para el ejemplo del motor DC
+
+![convergence_table](images/convergence_table.png)
+
+Después de terminar la ejecución del algoritmo también es posible verificar algunos resultados, por ejemplo verificar que tanto se logró ajustar la respuesta del modelo a la respuesta real del sistema. La siguiente figura muestra los resultados del motor DC Moog
+
+![time domain results](images/Resultado_salidas.png)
+
+Al final los resultados obtenidos son los siguientes:
+
+* L_arm = &4.16x10^-8$
+* rotor_damping = $1.086x10-7$
+* stall_torque = $0.3537$
 
 
