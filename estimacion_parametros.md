@@ -62,9 +62,10 @@ Para este caso se han configurado aquellos parámetros que se encuentran en la d
 * stall_torque es el torque de operación del motor. Se le da un valor inicial de $0.003$
 
   Todos los otros parámetros se han configuardo de acuerdo a los datos dados en el datasheet. La siguiente imágen muestra los parámetros configurados:
-   ![electric parameters](images/MotordDC_electric parameters.png)
 
-  ![mechanical parameters](images/MotorDC mechanical parameters.PNG)
+![electric parameters](images/MotordDC_electric parameters.png)
+
+![mechanical parameters](images/MotorDC mechanical parameters.PNG)
 
   
 
