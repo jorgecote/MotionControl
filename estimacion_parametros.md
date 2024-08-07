@@ -14,7 +14,7 @@ De la figura anterior se puede observar que el fabricante no entrega parámetros
 
 A este motor Moog C23L33W10 se le realizan pruebas en lazo abierto, de tal manera que se pueda obtener información de la dinámica del motor y a partir de esto llegar a un modelo aproximado al comportamiento real.
 
-## Metodología de Uso de herramienta de estimación de prámetros
+## Metodología de Uso de herramienta de estimación de parámetros
 Para realizar la estimación de parámetros de cualquier sistema es posible reducir el procedimiento a los siguientes pasos:
 
 * Recopilar los datos de entrada y salida del sistema por medio de una tarjeta de adquisición de datos, un osciloscopio o un microcontrolador+Simulink
@@ -59,7 +59,7 @@ Para este caso se han configurado aquellos parámetros que se encuentran en la d
 
 * L_arm es la inductancia de armadura del motor. Se le da un valor inicial arbitrario $3.2x10^-5$
 * rotor_damping es el coeficiente de amortiguamiento del eje del motor. Se le da un valor inicial de $1x10^-7$
-* stall_torque es el torque de operación del motor. Se le da un valor inicial de 0.003
+* stall_torque es el torque de operación del motor. Se le da un valor inicial de $0.003$
 
   Todos los otros parámetros se han configuardo de acuerdo a los datos dados en el datasheet.
 
@@ -72,7 +72,7 @@ Para utilizar la herramienta de estimación de parámetros, el modelo que se qui
 
 Con esto se abre una sesión de la aplicación de estimación de parámetros junto con la interfaz de usuario que tendrá el aspecto que se observa en la figura
 
-![Interfaz estimador de parámetros](images/param_estim interfaz.PNG)
+![parameter estimator interfaz](images/param_estim interfaz.PNG)
 
 Posteriormente configure un nuevo experimento de estimación de parámetros. Para la configuración de un nuevo experimento tenga en cuenta lo siguiente:
 
@@ -81,7 +81,7 @@ Posteriormente configure un nuevo experimento de estimación de parámetros. Par
 * Configure los parámetros que va a estimar haciendo check en las respectivas variables
 * Corra el exprimento de estimación
 
-  ## Resultados de la estmación
+  ## Resultados de la estimación
 Durante el proceso de estimación se van viendo resultados que permite establecer si el algoritmo presenta convergencia para encontrar los parámetros del experimento.
 
 Por ejemplo se tiene la gráfica que va variando con el valor que va tomando cada parámetro durante la ejecución del algoritmo. En la siguiente figura se muestra el resultado del ejemplo del motor Moog C23L33W10.
@@ -98,7 +98,7 @@ Después de terminar la ejecución del algoritmo también es posible verificar a
 
 Al final los resultados obtenidos son los siguientes:
 
-* L_arm = &4.16x10^-8$
+* L_arm = $4.16x10^-8$
 * rotor_damping = $1.086x10-7$
 * stall_torque = $0.3537$
 
