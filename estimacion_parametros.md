@@ -105,4 +105,7 @@ Al final los resultados obtenidos son los siguientes:
 * rotor_damping = $1.086x10-7$
 * stall_torque = $0.3537$
 
+## Referencias
 
+https://la.mathworks.com/help/sldo/gs/estimate-parameters-from-measured-data-using-the-gui.html
+https://la.mathworks.com/videos/how-to-estimate-model-parameters-from-test-data-with-simulink-1632388166208.html
