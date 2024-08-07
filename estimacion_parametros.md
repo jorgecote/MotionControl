@@ -57,8 +57,8 @@ En la imagen se observa bloques de paquete Simscape que representan el modelo ma
 
 Para este caso se han configurado aquellos parámetros que se encuentran en la documentación dada por el fabricante y se dejan para estimar 3 parámetros que son desconocidos y que sería difícil medir:
 
-* L_arm es la inductancia de armadura del motor. Se le da un valor inicial arbitrario $3.2x10^-5$
-* rotor_damping es el coeficiente de amortiguamiento del eje del motor. Se le da un valor inicial de $1x10^-7$
+* L_arm es la inductancia de armadura del motor. Se le da un valor inicial arbitrario $3.2x10^(-5)$
+* rotor_damping es el coeficiente de amortiguamiento del eje del motor. Se le da un valor inicial de $1x10^(-7)$
 * stall_torque es el torque de operación del motor. Se le da un valor inicial de $0.003$
 
   Todos los otros parámetros se han configuardo de acuerdo a los datos dados en el datasheet. La siguiente imágen muestra los parámetros configurados:
@@ -102,8 +102,8 @@ Después de terminar la ejecución del algoritmo también es posible verificar a
 
 Al final los resultados obtenidos son los siguientes:
 
-* L_arm = $4.16x10^-8$
-* rotor_damping = $1.086x10-7$
+* L_arm = $4.16x10^(-8)$
+* rotor_damping = $1.086x10^(-7)$
 * stall_torque = $0.3537$
 
 ## Referencias
